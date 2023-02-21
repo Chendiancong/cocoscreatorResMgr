@@ -5,6 +5,13 @@ class _funLinker {
     thiz: any = null;
 }
 
+export interface IDelegate<FunType extends Function> {
+    get entry(): FunType;
+    add(f: FunType, thiz?: any);
+    remove(f: FunType, thiz?: any);
+    clear();
+}
+
 export class Delegate<FunType extends Function> implements IDelegate<FunType> {
     _tag: string = "_delegate_";
     _head: _funLinker;

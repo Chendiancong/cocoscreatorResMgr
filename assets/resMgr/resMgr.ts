@@ -1,5 +1,5 @@
 import { Asset, assetManager, AssetManager, resources, SceneAsset } from "cc";
-import { asDelegate } from "../core/utils/Delegate";
+import { asDelegate, IDelegate } from "../core/utils/Delegate";
 import { ResHolder } from "./resHolder";
 
 interface IResRequestBase { }
